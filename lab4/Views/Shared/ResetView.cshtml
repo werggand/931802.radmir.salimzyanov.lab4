@@ -1,0 +1,19 @@
+﻿@model lab4.Models.ResetInf
+
+@{
+    ViewData["Title"] = "Reset";
+}
+
+<h1>Reset your password</h1>
+<form asp-antiforgery="true" asp-action="ResetView" asp-controller="Reset">
+
+    <div class="validation">
+        <label asp-for="email"></label>
+        <input type="text" asp-for="email" />
+        <span asp-validation-for="email"></span>
+    </div>
+
+    <button type="submit" name="submit" value="have" style="border: 0.5px solid rgba(0, 0, 0, 0.56); padding: 4px 12px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: white; margin-top:10px;">I have a code</button>
+    <button type="submit" name="submit" value="send" style="border: 0.5px solid rgba(0, 0, 0, 0.56); padding: 4px 12px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: white; margin-top:10px;">Send me a code</button>
+
+</form>

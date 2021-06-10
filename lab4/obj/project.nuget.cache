@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cu0LWktqHR9v1GcrotbUMy15/cojIkHhh95c0RaEbyNWugE4kjigHIy15hU+Hv7esoA3jiz1MmzRL5j2Kv1Cxw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\werggand\\Desktop\\dasha.bugakova.931801.lab4-master\\lab4\\lab4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\werggand\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}

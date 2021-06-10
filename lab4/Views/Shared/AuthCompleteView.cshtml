@@ -1,0 +1,30 @@
+﻿@model lab4.Models.User
+
+@{
+    ViewData["Title"] = "AuthCompleteView";
+}
+
+<h2>Sign Up Result</h2>
+<ul style="list-style-type: none">
+    <li>
+        @Html.DisplayFor(item => item.UserInfModel.FirstName)
+    </li>
+    <li>
+        @Html.DisplayFor(item => item.UserInfModel.SecondName)
+    </li>
+    <li>
+        @Html.DisplayFor(item => item.UserInfModel.Day)
+    </li>
+    <li>
+        @Html.DisplayFor(item => item.UserInfModel.Month)
+    </li>
+    <li>
+        @Html.DisplayFor(item => item.UserInfModel.Year)
+    </li>
+    <li>
+        @Html.DisplayFor(item => item.PrUserInfModel.email)
+    </li>
+    <li>
+        @Html.DisplayFor(item => item.PrUserInfModel.password)
+    </li>
+</ul>

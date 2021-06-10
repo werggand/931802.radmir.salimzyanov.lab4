@@ -1,0 +1,71 @@
+﻿@model lab4.Models.User
+
+@{
+    ViewData["Title"] = "AuthView";
+}
+
+<h2>Auth</h2>
+
+<form asp-antiforgery="true" asp-action="AuthView" asp-controller="Auth">
+
+    <div style="display:@ViewBag.Public">
+        <div class="validation">
+            <label asp-for="UserInfModel.FirstName"></label>
+            <input type="text" asp-for="UserInfModel.FirstName" />
+            <span asp-validation-for="UserInfModel.FirstName"></span>
+        </div>
+
+        <div class="validation">
+            <label asp-for="UserInfModel.SecondName"></label>
+            <input type="text" asp-for="UserInfModel.SecondName" />
+            <span asp-validation-for="UserInfModel.SecondName"></span>
+        </div>
+
+        <div class="validation">
+            <label asp-for="UserInfModel.Month"></label>
+            <select asp-for="UserInfModel.Month" asp-items="Model.UserInfModel.Mounts">
+            </select>
+            <span asp-validation-for="UserInfModel.Month"></span>
+        </div>
+
+        <div class="validation">
+            <label asp-for="UserInfModel.Day"></label>
+            <select asp-for="UserInfModel.Day" asp-items="Model.UserInfModel.Days">
+            </select>
+            <span asp-validation-for="UserInfModel.Day"></span>
+        </div>
+        <div class="validation">
+            <label asp-for="UserInfModel.Year"></label>
+            <select asp-for="UserInfModel.Year" asp-items="Model.UserInfModel.Years">
+            </select>
+            <span asp-validation-for="UserInfModel.Year"></span>
+        </div>
+        <div class="validation">
+            <label asp-for="UserInfModel.Gender"></label><br />
+            @foreach (var gender in Model.UserInfModel.Genders)
+            {
+                <input type="radio" asp-for="UserInfModel.Gender" value="@gender" />@gender<br />
+            }
+        </div>
+        <input type="submit" value="signUp" name="action" style="border: 0.5px solid rgba(0, 0, 0, 0.56); padding: 4px 12px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: white; margin-top:10px;" />
+    </div>
+
+    <div style="display:@ViewBag.Private">
+        <div class="validation">
+            <label asp-for="PrUserInfModel.email"></label>
+            <input type="text" asp-for="PrUserInfModel.email" />
+            <span asp-validation-for="PrUserInfModel.email"></span>
+        </div>
+        <div class="validation">
+            <label asp-for="PrUserInfModel.password"></label>
+            <input type="password" asp-for="PrUserInfModel.password" />
+            <span asp-validation-for="PrUserInfModel.password"></span>
+        </div>
+        <div class="validation">
+            <label asp-for="PrUserInfModel.confirmPassword"></label>
+            <input type="password" asp-for="PrUserInfModel.confirmPassword" />
+            <span asp-validation-for="PrUserInfModel.confirmPassword"></span>
+        </div>
+        <input type="submit" value="Complete" name="action" style="border: 0.5px solid rgba(0, 0, 0, 0.56); padding: 4px 12px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: white; margin-top:10px;"/>
+    </div>
+</form>

@@ -1,0 +1,21 @@
+﻿@model lab4.Models.Month
+
+@{
+    ViewData["Title"] = "Radio";
+}
+
+<h1>Radio</h1>
+
+<form method="post">
+    Months
+    <ul style="list-style-type: none">
+        @foreach (var item in Model.months)
+        {
+            <li>
+                <input type="radio" name="months" value="@item" id="test" checked="checked" />
+                @item
+            </li>
+        }
+    </ul>
+    <input type="submit" value="Submit" style="border: 0.5px solid rgba(0, 0, 0, 0.56); padding: 4px 12px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: white; margin-top:10px;"/>
+</form>

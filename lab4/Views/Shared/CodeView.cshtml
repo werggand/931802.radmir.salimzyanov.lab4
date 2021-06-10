@@ -1,0 +1,22 @@
+﻿@model lab4.Models.Code
+
+@{
+    ViewData["Title"] = "CodeView";
+}
+
+<h1>Code</h1>
+<div>
+    <form asp-antiforgery="true" asp-action="Verify" asp-controller="Reset">
+
+        <div>
+            <label asp-for="confirmCode"></label>
+            <input type="text" asp-for="confirmCode" />
+            <span asp-validation-for="confirmCode"></span>
+        </div>
+
+        <h3>@Model.code</h3>
+        <input style="display:none" name="code" value="@Model.code" />
+        <button type="submit" name="submit" style="border: 0.5px solid rgba(0, 0, 0, 0.56); padding: 4px 12px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: white; margin-top:10px;">Verify</button>
+    </form>
+</div>
+
